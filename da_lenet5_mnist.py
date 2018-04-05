@@ -136,7 +136,7 @@ def build_lenet():
 if __name__ == '__main__':
 
     # batch and latent size taken from the paper
-    nb_epochs = 100
+    nb_epochs = 10
     batch_size = 100
     latent_size = 100
     nb_classes = 10
@@ -207,7 +207,7 @@ if __name__ == '__main__':
     for epoch in range(nb_epochs):
         print('Epoch {} of {}'.format(epoch + 1, nb_epochs))
 
-        nb_batches = int(X_train.shape[0] / batch_size)
+        nb_batches = 100 #int(X_train.shape[0] / batch_size)
         progress_bar = Progbar(target=nb_batches)
 
         epoch_gen_loss = []
